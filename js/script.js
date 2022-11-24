@@ -42,7 +42,7 @@
 	}*/
 	const optArticleSelector = ".post",
 		optTitleSelector = ".post-title",
-		optTitleListSelector = ".titles";
+		optTitleListSelector = ".titles",
 	optArticleTagsSelector = ".post-tags .list";
 
 	function generateTitleLinks() {
@@ -99,7 +99,7 @@
 			/* START LOOP: for each tag */
 			for (let tag of articleTagsArray) {
 				/* generate HTML of the link */
-                const linkHTML = '<li><a href="#tag-' + articleTags + '">' + articleTags + '</a></li>'
+                const linkHTML = '<li><a href="#tag-' + tag + '">' + tag + '</a></li>';
 				/* add generated code to html variable */
                 html = html + linkHTML;
 				/* END LOOP: for each tag */
@@ -107,6 +107,7 @@
 
 			/* insert HTML of all the links into the tags wrapper */
             const tags = document.querySelectorAll(".list-horizontal a");
+            tagsWrapper.innerHTML = html;
             
 
 			/* END LOOP: for every article: */
