@@ -65,11 +65,7 @@
 
 			/* create HTML of the link */
 			const linkHTML =
-				'<li><a href="#' +
-				articleId +
-				'"><span>' +
-				articleTitle +
-				"</span></a></li>";
+				'<li><a href="#' + articleId + '"><span>' + articleTitle + "</span></a></li>";
 
 			/* insert link into titleList */
 			html = html + linkHTML;
@@ -103,11 +99,15 @@
 			/* START LOOP: for each tag */
 			for (let tag of articleTagsArray) {
 				/* generate HTML of the link */
+                const linkHTML = '<li><a href="#tag-' + articleTags + '">' + articleTags + '</a></li>'
 				/* add generated code to html variable */
+                html = html + linkHTML;
 				/* END LOOP: for each tag */
 			}
 
 			/* insert HTML of all the links into the tags wrapper */
+            const tags = document.querySelectorAll(".list-horizontal a");
+            
 
 			/* END LOOP: for every article: */
 		}
