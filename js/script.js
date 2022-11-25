@@ -159,9 +159,13 @@
 
 	function addClickListenersToTags() {
 		/* find all links to tags */
+		const allLinks = document.querySelectorAll("list-horizontal");
 		/* START LOOP: for each link */
-		/* add tagClickHandler as event listener for that link */
-		/* END LOOP: for each link */
+		for (let eachLink of allLinks) {
+			/* add tagClickHandler as event listener for that link */
+			eachLink.addEventListener("click", tagClickHandler);
+			/* END LOOP: for each link */
+		}
 	}
 
 	addClickListenersToTags();
