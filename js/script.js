@@ -159,7 +159,7 @@
 
 	function addClickListenersToTags() {
 		/* find all links to tags */
-		const allLinks = document.querySelectorAll("list-horizontal");
+		const allLinks = document.querySelectorAll(optArticleTagsSelector);
 		/* START LOOP: for each link */
 		for (let eachLink of allLinks) {
 			/* add tagClickHandler as event listener for that link */
