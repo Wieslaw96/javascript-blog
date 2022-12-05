@@ -179,9 +179,9 @@ function generateAuthors() {
 
 		const articleAuthor = article.getAttribute("data-author");
 
-		const linkHTML = '<a href="#author">' + articleAuthor + "</a>";
+		const linkHTML = '<a href="#Author>' + articleAuthor + '</a>';
 
-		authorWrapper.innerHTML = linkHtml;
+		authorWrapper.innerHTML = linkHTML;
 	}
 }
 generateAuthors();
@@ -218,3 +218,5 @@ function addClickListenersToAuthors() {
 		eachLink.addEventListener("click", authorClickHandler);
 	}
 }
+
+addClickListenersToAuthors();
