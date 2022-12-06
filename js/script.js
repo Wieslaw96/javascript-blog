@@ -179,7 +179,8 @@ function generateAuthors() {
 
 		const articleAuthor = article.getAttribute("data-author");
 
-		const linkHTML = '<a href="#Author>' + articleAuthor + '</a>';
+		const linkHTML =
+			'<a href="#author-' + articleAuthor + '">' + articleAuthor + "</a>";
 
 		authorWrapper.innerHTML = linkHTML;
 	}
