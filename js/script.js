@@ -43,7 +43,7 @@ const optArticleSelector = ".post",
 	optTitleListSelector = ".titles",
 	optArticleTagsSelector = ".post-tags .list",
 	optArticleAuthorSelector = ".post .post-author",
-	optTagsListSelector = ".tags .list";
+	optTagsListSelector = ".tags.list";
 
 function generateTitleLinks(customSelector = "") {
 	/* remove contents of titleList */
